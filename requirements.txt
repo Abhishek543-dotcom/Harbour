@@ -1,0 +1,6 @@
+pyspark==3.5.0
+delta-spark==2.3.0
+psycopg2-binary==2.9.8
+boto3==1.28.69
+minio==7.1.16
+jupyter==1.0.0

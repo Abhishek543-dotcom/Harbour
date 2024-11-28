@@ -1,0 +1,6 @@
+postgresqlUsername: admin
+postgresqlPassword: admin123
+postgresqlDatabase: delta_metadata
+persistence:
+  enabled: true
+  size: 1Gi

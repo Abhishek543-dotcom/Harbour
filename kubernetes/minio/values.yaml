@@ -1,0 +1,30 @@
+## MinIO Helm chart configuration (values.yaml)
+# MinIO configuration values for the deployment
+
+# Define the access and secret keys for MinIO
+accessKey: "minioaccesskey"
+secretKey: "miniosecretkey"
+
+# Configure the MinIO server
+replicas: 1
+resources:
+  limits:
+    cpu: "1"
+    memory: "1Gi"
+  requests:
+    cpu: "0.5"
+    memory: "512Mi"
+
+# Configure the persistence (use emptyDir for local testing, or a PVC for production)
+persistence:
+  enabled: true
+  size: 10Gi
+
+# Define the service type (ClusterIP, NodePort, LoadBalancer)
+service:
+  type: ClusterIP
+  port: 9000
+
+# Configure the MinIO access point for client communication
+apiVersion: apps/v1
+kind: Deployment
